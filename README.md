@@ -3,16 +3,16 @@ zepto-autoResizer
 A Zepto plugin that auto resizes the "textarea" based on the content it holds.
 
 ### Usage ###
- * See ```demo/autoResizer.html``` for demo.
+See `demo/autoResizer.html` for demo.
 
-```
+```javascript
 Zepto(function($) {
   $("textAreaSelector").autoResize();
 });
 ```
 
 You can also pass options
-```
+```javascript
 Zepto(function($) {
   $("textAreaSelector").autoResize({
     minHeight: 100,
@@ -28,9 +28,8 @@ Available options include:
    * animate : *(default: {duration: 200, complete: function(){})* - Zepto's animate function properties. See http://zeptojs.com/#animate for details.
 
 You can unbind listeners bound by this plugin as below:-
-```
+```javascript
 $(textAreaSelector).off(".autoResize")
 ```
 
 ### Tests ###
-
