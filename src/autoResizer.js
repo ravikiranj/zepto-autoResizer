@@ -127,7 +127,7 @@
      * unbind - unbind from the DOM element's update events
      */
     unbind: function() {
-      this.el.unbind(".autoResize");
+      this.el.off(".autoResize");
     },
 
     /**
@@ -205,16 +205,6 @@
       } else {
         el.height(scrollTop);
       }
-    },
-
-    /**
-     * destroy - removes auto resizing functionality on the DOM element
-     */
-    destroy: function() {
-      this.unbind();
-      this.clone.remove();
-      delete this.el;
-      delete this.clone;
     },
 
     /**
