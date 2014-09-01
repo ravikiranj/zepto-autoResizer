@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <title>autoResize demo</title>
+    <style>
+    textarea {
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+
+<h1>Textarea</h1>
+<textarea id="TEST"></textarea>
+<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.js"></script>
+<!-- Note: Include Zepto's animate (fx.js) module to support animations during autoResizing -->
+<!--<script src="js/fx.js"></script> -->
+<script src="js/autoResizer.js"></script>
+<script>
+    $("textarea").autoResize({minHeight: 100});
+</script>
+</body>
+</html>
