@@ -7,14 +7,15 @@ See `demo/autoResizer.html` for demo.
 
 ```javascript
 Zepto(function($) {
-  $("textAreaSelector").autoResize();
+  $("textarea.className").autoResize();
+  // $("textarea#id").autoResize();
 });
 ```
 
 You can also pass options
 ```javascript
 Zepto(function($) {
-  $("textAreaSelector").autoResize({
+  $("textarea.className").autoResize({
     minHeight: 100,
     maxHeight: 500
   });
@@ -29,7 +30,8 @@ Available options include:
 
 You can unbind listeners bound by this plugin as below:-
 ```javascript
-$(textAreaSelector).off(".autoResize")
+$("textarea.className").off(".autoResize")
 ```
+
 
 ### Tests ###

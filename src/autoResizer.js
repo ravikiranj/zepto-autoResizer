@@ -64,9 +64,8 @@
   function autoResize(config) {
     /* jshint validthis: true */
     this.filter(autoResize.resizableFilterSelector).each(function(){
-      new AutoResizer( $(this), config );
+      new AutoResizer($(this), config);
     });
-    return this;
   }
 
   /**
@@ -153,6 +152,7 @@
       clone
         .removeAttr("name")
         .removeAttr("id")
+        .removeAttr("class")
         .attr("tabIndex", -1)
         .css(autoResize.cloneCSSValues);
     },

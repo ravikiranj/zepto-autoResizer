@@ -8,21 +8,21 @@
     <meta http-equiv="cleartype" content="on">
     <title>autoResize demo</title>
     <style>
-    textarea {
-        box-sizing: border-box;
-    }
+        .review {
+            box-sizing: border-box;
+            width: 90%;
+        }
     </style>
 </head>
 <body>
-
-<h1>Textarea</h1>
-<textarea id="TEST"></textarea>
-<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.js"></script>
-<!-- Note: Include Zepto's animate (fx.js) module to support animations during autoResizing -->
-<!--<script src="js/fx.js"></script> -->
-<script src="js/autoResizer.js"></script>
-<script>
-    $("textarea").autoResize({minHeight: 100});
-</script>
+    <h1>Textarea</h1>
+    <textarea class="review"></textarea>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.js"></script>
+    <!-- Note: Include Zepto's animate (fx.js) module to support animations during autoResizing -->
+    <!--<script src="js/fx.js"></script> -->
+    <script src="js/autoResizer.js"></script>
+    <script>
+        $("textarea.review").autoResize({minHeight: 100});
+    </script>
 </body>
 </html>
