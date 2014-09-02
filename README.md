@@ -37,5 +37,4 @@ $("textarea.className").off(".autoResize")
 * You will need to include the non-default ["fx" module](https://github.com/madrobby/zepto/blob/master/src/fx.js) to support animations.
 * Currently, you can turn on *autoResize* functionality and *unbind* events later. There is no way to reinstate autoResizing after unbinding. In order to support destroy-reinstante, I had to include ["data" module](https://github.com/madrobby/zepto/blob/master/src/data.js), but I have deferred this feature as of now.
 
-### Tests ###
 
