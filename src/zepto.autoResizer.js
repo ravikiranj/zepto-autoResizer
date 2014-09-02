@@ -22,7 +22,8 @@
       complete: function(){}
     },
     minHeight: "original",
-    maxHeight: 500
+    bottomPadding: 30,
+    maxHeight: 1000
   }
   // ifdefinedNotNull func
   , ifdefNN = function(a) {
@@ -121,7 +122,7 @@
       this.unbind();
 
       // Bind to DOM element's update events
-      this.el.on("keyup.autoResize input.autoResize paste.autoResize focus.autoResize", check);
+      this.el.on("keyup.autoResize input.autoResize paste.autoResize click.autoResize change.autoResize", check);
       
       // Check if element's height needs to be update
       this.check(null, true);
@@ -175,7 +176,7 @@
       clone.height(0).val(value).scrollTop(10000);
 
       // Get the new scrollTop value
-      var scrollTop = clone.scrollTop();
+      var scrollTop = clone.scrollTop() + config.bottomPadding;
         
       // Don't do anything if scrollTop hasen't changed:
       if (this.previousScrollTop === scrollTop) {
