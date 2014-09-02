@@ -11,6 +11,8 @@
         .review {
             box-sizing: border-box;
             width: 90%;
+            min-height: 100px;
+            height: 100px;
         }
     </style>
 </head>
@@ -19,8 +21,8 @@
     <textarea class="review"></textarea>
     <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.js"></script>
     <!-- Note: Include Zepto's animate (fx.js) module to support animations during autoResizing -->
-    <!--<script src="js/fx.js"></script> -->
-    <script src="js/autoResizer.js"></script>
+    <!--<script src="../src/fx.js"></script> -->
+    <script src="../src/autoResizer.js"></script>
     <script>
         $("textarea.review").autoResize({minHeight: 100});
     </script>
