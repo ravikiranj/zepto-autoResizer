@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Zepto-autoresizer : Zepto Auto Resizer Plugin for textarea">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Zepto-autoresizer</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ravikiranj/zepto-autoResizer">View on GitHub</a>
+
+          <h1 id="project_title">Zepto-autoresizer</h1>
+          <h2 id="project_tagline">Zepto Auto Resizer Plugin for textarea</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ravikiranj/zepto-autoResizer/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ravikiranj/zepto-autoResizer/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="zepto-autoresizer" class="anchor" href="#zepto-autoresizer"><span class="octicon octicon-link"></span></a>zepto-autoResizer</h1>
+
+<p>A Zepto plugin that auto resizes the "textarea" based on the content it holds.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<p>See <code>demo/autoResizer.html</code> for demo.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">Zepto</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"textarea.className"</span><span class="p">).</span><span class="nx">autoResize</span><span class="p">();</span>
+  <span class="c1">// $("textarea#id").autoResize();</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>You can also pass options</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">Zepto</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"textarea.className"</span><span class="p">).</span><span class="nx">autoResize</span><span class="p">({</span>
+    <span class="nx">minHeight</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="nx">maxHeight</span><span class="o">:</span> <span class="mi">500</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Available options include:</p>
+
+<ul>
+<li>minHeight: <em>(default: "original")</em> - A number indicating the minimum height to be retained</li>
+<li>maxHeight: <em>(default: 500)</em> - A number indicating the maximum height that the resizable element can be</li>
+<li>onResize: <em>(default: function(){})</em> - Callback function whenever the "textarea" is resized (passes the element as input to the callback)</li>
+<li>animate : <em>(default: {duration: 200, complete: function(){})</em> - Zepto's animate function properties. See <a href="http://zeptojs.com/#animate">http://zeptojs.com/#animate</a> for details.</li>
+</ul><p>You can unbind listeners bound by this plugin as below:-</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"textarea.className"</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s2">".autoResize"</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="caveats" class="anchor" href="#caveats"><span class="octicon octicon-link"></span></a>Caveats</h3>
+
+<ul>
+<li>You will need to include the non-default <a href="https://github.com/madrobby/zepto/blob/master/src/fx.js">"fx" module</a> to support animations.</li>
+<li>Currently, you can turn on <em>autoResize</em> functionality and <em>unbind</em> events later. There is no way to reinstate autoResizing after unbinding. In order to support destroy-reinstante, I had to include <a href="https://github.com/madrobby/zepto/blob/master/src/data.js">"data" module</a>, but I have deferred this feature as of now.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Zepto-autoresizer maintained by <a href="https://github.com/ravikiranj">ravikiranj</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
