@@ -1,6 +1,6 @@
 zepto-autoResizer
 =================
-A Zepto plugin that auto resizes the "textarea" based on the content it holds.
+A Zepto plugin that auto resizes the "textarea" based on the content it holds. This is the simplified and ported version of [jQuery.fn.autoResize](https://github.com/jamespadolsey/jQuery.fn.autoResize) by James Padolsey.
 
 ### Usage ###
 See `demo/autoResizer.html` for demo.
@@ -37,4 +37,5 @@ $("textarea.className").off(".autoResize")
 * You will need to include the non-default ["fx" module](https://github.com/madrobby/zepto/blob/master/src/fx.js) to support animations.
 * Currently, you can turn on *autoResize* functionality and *unbind* events later. There is no way to reinstate autoResizing after unbinding. In order to support destroy-reinstante, I had to include ["data" module](https://github.com/madrobby/zepto/blob/master/src/data.js), but I have deferred this feature as of now.
 
-
+### License ###
+* BSD 3-Caluse License. See https://github.com/ravikiranj/zepto-autoResizer/blob/master/LICENSE for details.
