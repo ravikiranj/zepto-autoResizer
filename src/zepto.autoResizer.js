@@ -22,7 +22,7 @@
       complete: function(){}
     },
     minHeight: "original",
-    maxheight: 500
+    maxHeight: 500
   }
   // ifdefinedNotNull func
   , ifdefNN = function(a) {
@@ -85,9 +85,9 @@
 
     // Save properties to the instance by using "this", since AutoResizer can have multiple instances
     // Merge default and passed configs
-    config = this.config = $.extend(autoResize.defaults, config);
+    this.config = {}
+    $.extend(this.config, autoResize.defaults, config);
     this.el = el;
-    this.originalHeight = el.height();
     this.previousScrollTop = null;
     this.value = el.val();
 
