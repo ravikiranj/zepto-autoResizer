@@ -32,6 +32,16 @@
   , CLONE_CONTAINER_ID = "ZEPTO_AUTORESIZER_CLONE_CONTAINER"
   ;
 
+  /**
+   * autoResize - instantiates and associates a "AutoResizer" instance to each valid selector passed
+   */
+  function autoResize(config) {
+    /* jshint validthis: true, nonew: false */
+    this.filter(autoResize.resizableFilterSelector).each(function(){
+      new AutoResizer($(this), config);
+    });
+  }
+
   // Following CSS properties need to be copied from the original to the cloen
   autoResize.cloneCSSProperties = [
     "lineHeight", "textDecoration", "letterSpacing",
@@ -54,19 +64,6 @@
   autoResize.resizableFilterSelector = "textarea";
   // Set default autoresizer properties
   autoResize.defaults = defaults;
-  // Assign autoResize as a Zepto module
-  autoResize.AutoResizer = AutoResizer;
-  $.fn.autoResize = autoResize;
-
-  /**
-   * autoResize - instantiates and associates a "AutoResizer" instance to each valid selector passed
-   */
-  function autoResize(config) {
-    /* jshint validthis: true */
-    this.filter(autoResize.resizableFilterSelector).each(function(){
-      new AutoResizer($(this), config);
-    });
-  }
 
   /**
    * AutoResizer - the standalone component responsible for auto resizing the DOMElement
@@ -96,6 +93,10 @@
     // Bind events to the DOM Element
     this.bind();
   }
+
+  // Assign autoResize as a Zepto module
+  autoResize.AutoResizer = AutoResizer;
+  $.fn.autoResize = autoResize;
 
   /**
    * AutoResizer - standalone component that performs auto resizing on the DOM Element
