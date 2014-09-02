@@ -37,6 +37,10 @@
    */
   function autoResize(config) {
     /* jshint validthis: true, nonew: false */
+    // Initialize config with empty object if nothing is passed
+    if (!config) {
+      config = {}; 
+    } 
     this.filter(autoResize.resizableFilterSelector).each(function(){
       new AutoResizer($(this), config);
     });
