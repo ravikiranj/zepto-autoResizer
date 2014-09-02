@@ -1,6 +1,6 @@
 zepto-autoResizer
 =================
-A Zepto plugin that auto resizes the "textarea" based on the content it holds. This is the simplified and ported version of [jQuery.fn.autoResize](https://github.com/jamespadolsey/jQuery.fn.autoResize) by James Padolsey.
+A Zepto plugin that auto resizes the "textarea" based on the content it holds. This is the simplified and ported version of [jQuery.fn.autoResize](https://github.com/alexbardas/jQuery.fn.autoResize) by James Padolsey.
 
 ### Usage ###
 See `demo/autoResizer.html` for demo.
